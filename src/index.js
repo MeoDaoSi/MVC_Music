@@ -1,11 +1,8 @@
-// const express = require("express");
-import express from 'express';
-import engine from 'express-handlebars';
-import morgan from 'morgan';
-import path from 'path';
-const __dirname = path.resolve();
-
-// const morgan = require('morgan');
+const express = require("express");
+const engine = require("express-handlebars");
+const morgan = require("morgan");
+const path = require("path");
+const routes = require("./routes");
 
 const app = express();
 
@@ -18,16 +15,10 @@ app.engine('hbs', engine.engine({
 	extname:".hbs"
 }));
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'src/resources/views'));
-
-app.get("/", (req, res) => {
-	res.render('home');
-});
-app.get("/news", (req, res) => {
-	res.render('news');
-});
+app.set('views', path.join(__dirname, 'resources/views'));
+// Routes
+routes(app);
 
 app.listen(port, () => {
 	console.log(`Exampless app listening on port ${port}`);
-	console.log('hello');
 });
