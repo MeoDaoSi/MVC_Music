@@ -4,7 +4,7 @@ class NewsController {
     // [GET] / news
     index(req, res, next){
         song.find({})
-            .then(songs => res.render('news',{
+            .then(songs => res.render('home',{
                     songs: mutipleMongooseToObject(songs)
                 })
             )

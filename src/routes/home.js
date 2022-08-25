@@ -1,7 +1,7 @@
 const express = require("express");
 const routes = express.Router();
 
-const newsController = require('../controller/Newscontroller');
+const newsController = require('../controller/Homecontroller');
 
 // routes.use('/:slug',newsController.show);
 

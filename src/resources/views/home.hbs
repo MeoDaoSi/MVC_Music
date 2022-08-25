@@ -1,1 +1,16 @@
-<h1>HOME</h1>
+<div class="mt-4">
+    <div class="row">
+        {{#each songs}}
+        <div class="col-sm-6 col-lg-4 col-card-song">
+            <div class="card">
+                <a href="/list/{{this.slug}}"><img src="{{this.img}}" class="card-img-top" alt="{{this.name}}"></a>
+                <div class="card-body">
+                    <a href="/list/{{this.slug}}"><h5 class="card-title">{{this.name}}</h5></a>
+                    <p class="card-text">{{this.author}}</p>
+                    <a href="#" class="btn btn-primary">Music</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
