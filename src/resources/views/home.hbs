@@ -1,16 +1,83 @@
-<div class="mt-4">
-    <div class="row">
-        {{#each songs}}
-        <div class="col-sm-6 col-lg-4 col-card-song">
-            <div class="card">
-                <a href="/list/{{this.slug}}"><img src="{{this.img}}" class="card-img-top" alt="{{this.name}}"></a>
-                <div class="card-body">
-                    <a href="/list/{{this.slug}}"><h5 class="card-title">{{this.name}}</h5></a>
-                    <p class="card-text">{{this.author}}</p>
-                    <a href="#" class="btn btn-primary">Music</a>
+<!-- Today Choice -->
+<div class="choice-wrap">
+    <div class="choice__heading">
+        <h3>Today Choice</h3>
+        <div class="choice__heading-desc">
+            <span>20 Albums</span>
+            <span>
+                <i class="ri-arrow-left-s-line"></i>
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+    </div>
+    <div class="choice__content">
+        <div class="choice__item">
+            <img src="./assets/image/choice_img/choice-1.jpg" alt="Choice 1 Img">
+        </div>
+        <div class="choice__item">
+            <img src="./assets/image/choice_img/choice-2.jpg" alt="Choice 2 Img">
+        </div>
+        <div class="choice__item">
+            <img src="./assets/image/choice_img/choice-3.jpg" alt="Choice 3 Img">
+        </div>
+        <div class="choice__item">
+            <img src="./assets/image/choice_img/choice-4.jpg" alt="Choice 4 Img">
+        </div>
+        <div class="choice__item">
+            <img src="./assets/image/choice_img/choice-5.jpg" alt="Choice 5 Img">
+        </div>
+        <div class="choice__item">
+            <img src="./assets/image/choice_img/choice-6.jpg" alt="Choice 6 Img">
+        </div>
+        <div class="choice__item">
+            <img src="./assets/image/choice_img/choice-7.jpg" alt="Choice 7 Img">
+        </div>
+    </div>
+</div>
+<!-- Main Area -->
+<div class="main-area grid row no-gutters">
+    <div class="songs-list col l-7">
+        <div class="main-area__heading">
+            <!-- Js Load Data To Here -->
+        </div>
+        <div class="songs-list__songs">
+            <!-- Js Load Data To Here -->
+        </div>
+    </div>
+    <div class="song-player col l-4">
+        <div class="main-area__heading-disc">
+            <h3>Now Playing</h3>
+            <span>&nbsp;</span>
+        </div>
+        <div class="song-player__playing">
+            <div class="song-player__disc">
+                <div class="disc-wrap">
+                    <img class="cdThumb" src="" alt="">
+                    <h3 class="disc-wrap__name"></h3>
+                    <span class="disc-wrap__author"></span>
+                    <div class="progress-area">
+                        <!-- <div class="progress-bar"> -->
+                        <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                        <audio id="main-audio" src=""></audio>
+                        <!-- </div> -->
+                        <div class="song-timer">
+                            <span class="current">0:00</span>
+                            <span class="duration">0:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="song-action">
+                    <span class="material-symbols-outlined repeat">repeat</span>
+                    <i class="ri-rewind-fill back"></i>
+                    <i class="ri-play-fill play"></i>
+                    <i class="ri-pause-fill pause"></i>
+                    <i class="ri-speed-fill next"></i>
+                    <i class="ri-volume-down-line vol"></i>
+                    <span class="volume-bar">
+                        <input class="volume-bar__range" type="range" min="0" max="100" step="1" value="100">
+                    </span>
                 </div>
             </div>
         </div>
-        {{/each}}
     </div>
 </div>

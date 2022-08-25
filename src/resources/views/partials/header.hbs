@@ -1,36 +1,77 @@
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<!-- Nav Tablet + Mobile -->
+<input type="checkbox" hidden class="nav__input" name="" id="nav-input">
+<label for="nav-input" class="nav__overlay"></label>
+<div class="nav__mobile col l-2">
+    <label for="nav-input">
+        <i class="ri-menu-fold-line close__bar"></i>
+    </label>
+    <div class="nav__info-user">
+        <span class="nav__level-user">PRO</span>
+        <img src="./assets/image/user_info/user_avt.jpg" alt="User Avt Img" class="nav__info-user-img">
+        <h2 class="nav__info-user-name low-opa">MeoDaoSi</h2>
+        <span class="nav__info-user-mail low-opa">meodaosi@gmail.com</span>
     </div>
-  </div>
-</nav>
+    <ul class="nav__list">
+        <li class="nav__list-item">
+            <a href="/" class="nav__list-item-link low-opa low-opa active">
+                <i class="ri-home-5-line"></i>
+                Home
+            </a>
+        </li>
+        <li class="nav__list-item">
+            <a href="/" class="nav__list-item-link low-opa">
+                <i class="ri-firefox-line"></i>
+                Browse
+            </a>
+        </li>
+        <li class="nav__list-item">
+            <a href="/" class="nav__list-item-link low-opa">
+                <i class="ri-folder-5-line"></i>
+                Albums
+            </a>
+        </li>
+        <li class="nav__list-item">
+            <a href="/" class="nav__list-item-link low-opa">
+                <i class="ri-user-2-line"></i>
+                Artists
+            </a>
+        </li>
+        <li class="nav__list-item">
+            <a href="/" class="nav__list-item-link low-opa">
+                <i class="ri-video-line"></i>
+                Videos
+            </a>
+        </li>
+        <span>MY MUSIC</span>
+        <li class="nav__list-item">
+            <a href="/" class="nav__list-item-link low-opa">
+                <i class="ri-history-line"></i>
+                Recently Played
+            </a>
+        </li>
+        <li class="nav__list-item">
+            <a href="/" class="nav__list-item-link low-opa">
+                <i class="ri-heart-line"></i>
+                Favourite Songs
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- End Nav Tablet + Mobile -->
+<!-- Header -->
+<div class="header col l-10 m-12">
+    <div class="header__search">
+        <label for="nav-input">
+            <i id="bar" class="ri-menu-unfold-line"></i>
+        </label>
+        <input type="search" class="header__search-input" placeholder="Search for songs, artists, etc...">
+    </div>
+    <div class="header__setting">
+        <i class="ri-notification-2-line header__setting-noti low-opa"></i>
+        <i class="ri-settings-3-line header__setting-set low-opa"></i>
+        <div class="header__upgrade low-opa">
+            <a href="#">Upgrade Plan</a>
+        </div>
+    </div>
+</div>
+<!-- End Header -->
