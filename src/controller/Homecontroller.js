@@ -1,19 +1,19 @@
-const song = require("../models/song");
-const { mutipleMongooseToObject } = require("../util/mongoose");
+const song = require('../models/song');
+const { mutipleMongooseToObject } = require('../util/mongoose');
 class NewsController {
     // [GET] / news
-    index(req, res, next){
+    index(req, res, next) {
         song.find({})
-            .then(songs => res.render('home',{
-                    songs: mutipleMongooseToObject(songs)
-                })
+            .then((songs) =>
+                res.render('home', {
+                    songs: mutipleMongooseToObject(songs),
+                }),
             )
             .catch(next);
-        
     }
-    show(req, res){
+    show(req, res) {
         res.send('show details');
     }
 }
 
-module.exports = new NewsController;
+module.exports = new NewsController();

@@ -1,11 +1,11 @@
-const news = require("./news");
-const home = require("./home");
-const list = require("./list")
+const news = require('./news');
+const home = require('./home');
+const list = require('./list');
 
-function routes(app){
+function routes(app) {
     app.use('/news', news);
-    app.use('/list',list);
-    app.use("/", home);
+    app.use('/list', list);
+    app.use('/', home);
     // app.get("/news", (req, res) => {
     //     res.render('news');
     // });
